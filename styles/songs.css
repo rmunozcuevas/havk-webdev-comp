@@ -14,8 +14,10 @@ h1{
 
 .style-container {
     width: 300px;
-    height: 300px;
+    min-height: 100px;
     border: 1px solid green;
+    padding: 15px;
+    margin: 20
 }
 
 html {
@@ -32,9 +34,9 @@ html {
 
             align-items: center;
 
-            gap: 20px;
+            gap: 5px;
 
-            padding: 20px;
+            padding: 15px;
 
 }
 
