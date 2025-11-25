@@ -39,6 +39,19 @@ html {
             padding: 20px;
 
 }
+.two section {
+    height: 500px;
+}
+.two img {
+    padding: 15px;
+    width: 200px;
+    height: 210px;
+    border-radius: 25px;
+}
+
+
+
+
 
 .flex-item {
     flex: 1 1 300px; /* Responsive width */
@@ -47,3 +60,8 @@ html {
     text-align: center;
     border-radius: 10px;
 }
+.style-container:nth-child(2) {
+    height: 500px;
+}
+
+
