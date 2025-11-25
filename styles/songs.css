@@ -11,6 +11,15 @@ h1{
 
 }
 
+header p {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    align-items: center;
+}
+
 .style-container {
     width: 1100px;
     height: 300px;
@@ -43,7 +52,7 @@ html {
 
             padding: 15px;
             
-            color:#D8C9F5;
+            color:#6625e8;
 
 }
 .two section {
@@ -84,12 +93,24 @@ html {
 footer {
     text-align: center;
 }
+/* Ticker container */
+.ticker-wrapper {
+    width: 100%;
+    overflow: hidden;             /* hide overflowing images */
+    border: 2px solid #3D2C8D;
+    border-radius: 15px;
+    background-color: #F0F0F5;
+    padding: 10px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+/* Ticker container: hides overflow */
 .ticker-wrapper {
     width: 100%;
     overflow: hidden;
     border: 2px solid #3D2C8D;
     border-radius: 15px;
-    background: #F0F0F5;
+    background-color: #F0F0F5;
     padding: 10px 0;
     box-sizing: border-box;
     position: relative;
@@ -98,13 +119,111 @@ footer {
 .ticker {
     display: flex;
     white-space: nowrap;
+    position: relative;
+    align-items: center;
 }
+
+/* Images inside ticker */
+.ticker img {
+    height: 150px;        /* all images same height */
+    margin: 0 50px;       /* space between images */
+    flex-shrink: 0;       /* prevent shrinking while scrolling */
+    object-fit: cover;    
+}
+
+.top-nav {
+    position: fixed;           /* stays at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3D2C8D;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.top-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.top-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.top-nav .spotify-symbol {
+    width: 30px;
+    height: 30px;
+}
+/* Ticker container */
+.ticker-wrapper {
+    width: 100%;
+    overflow: hidden;             /* hide overflowing images */
+    border: 2px solid #3D2C8D;
+    border-radius: 15px;
+    background-color: #F0F0F5;
+    padding: 10px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Ticker container */
+.ticker-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid #3D2C8D;
+    border-radius: 15px;
+    background-color: #F0F0F5;
+    padding: 10px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite; 
+}
+
 
 .ticker img {
     height: 150px;
     margin: 0 50px;
     flex-shrink: 0;
+    object-fit: cover;
 }
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
+
+.ticker-wrapper:hover .ticker {
+    animation-play-state: paused;
+}
+
+
 
 
 
