@@ -84,12 +84,10 @@ html {
 footer {
     text-align: center;
 }
-
-.ticker {
+.ticker-wrapper {
     width: 100%;
-    overflow: hidden;          /* hide overflowing images */
-    white-space: nowrap;       /* keep images in a single line */
-    border: 2px solid #3D2C8D; 
+    overflow: hidden;
+    border: 2px solid #3D2C8D;
     border-radius: 15px;
     background: #F0F0F5;
     padding: 10px 0;
@@ -97,19 +95,19 @@ footer {
     position: relative;
 }
 
-.ticker img {
-    display: inline-block;
-    height: 150px;             /* adjust as needed */
-    margin: 0 50px;            /* space between images */
-    vertical-align: middle;
-    animation: scroll 10s linear infinite;
+.ticker {
+    display: flex;
+    white-space: nowrap;
 }
 
-/* Animation for the scroll */
-@keyframes scroll {
-    0%   { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+.ticker img {
+    height: 150px;
+    margin: 0 50px;
+    flex-shrink: 0;
 }
+
+
+
 
 
 
