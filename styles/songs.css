@@ -1,13 +1,12 @@
 h1{
     text-align: center;
     font-size: 100px;
-    color: rgba(0,0,255,.7);
+    color: #271F30;
     font-family: 'Courier New','monospace';
     opacity: .85;
     text-shadow:
-    0px -5px 10px rgba(0,0,255,.4),
-    0px -10px 20px rgba(0,0,255,.2),
-    0px -15px 30px rgba(0,0,0,.3);
+        0px 0px 10px rgba(155, 89, 182, 0.3),
+        0px 0px 20px rgba(155, 89, 182, 0.2);
     opacity: .9;
 
 }
@@ -17,7 +16,7 @@ h1{
     height: 300px;
     width: 1500px;
     min-height: 100px;
-    border: 1px solid green;
+    border: 5px solid #3D2C8D;
     border-radius: 25px;
     margin: auto;
     padding: 15px;
@@ -27,7 +26,7 @@ h1{
 }
 
 html {
-    background-color: orange;
+    background-color: #F0F0F5;
 }
 
 .flex-container {
@@ -43,6 +42,8 @@ html {
             gap: 5px;
 
             padding: 15px;
+            
+            color:#D8C9F5;
 
 }
 .two section {
@@ -74,5 +75,42 @@ html {
 .style-container:nth-child(2) {
     height: 500px;
 }
+
+.flex-container.top {
+    border: 10px solid #271F30;
+    border-radius: 20px;
+}
+
+footer {
+    text-align: center;
+}
+
+.ticker {
+    width: 100%;
+    overflow: hidden;          /* hide overflowing images */
+    white-space: nowrap;       /* keep images in a single line */
+    border: 2px solid #3D2C8D; 
+    border-radius: 15px;
+    background: #F0F0F5;
+    padding: 10px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.ticker img {
+    display: inline-block;
+    height: 150px;             /* adjust as needed */
+    margin: 0 50px;            /* space between images */
+    vertical-align: middle;
+    animation: scroll 10s linear infinite;
+}
+
+/* Animation for the scroll */
+@keyframes scroll {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
 
 
